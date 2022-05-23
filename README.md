@@ -3,6 +3,7 @@
 - [Entity Framework documentation](https://docs.microsoft.com/en-us/ef/).
 - [Code style rule options](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options).
 - [Entity Framework Core Succinctly](https://www.syncfusion.com/succinctly-free-ebooks/entity-frame-work-core-succinctly).
+- [Code First Data Annotations](https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/data-annotations)
 
 ## ORM
 *O*bject *R*elational *M*apping
