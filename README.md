@@ -2,6 +2,7 @@
 
 - [Entity Framework documentation](https://docs.microsoft.com/en-us/ef/).
 - [Code style rule options](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options).
+- [Entity Framework Core Succinctly](https://www.syncfusion.com/succinctly-free-ebooks/entity-frame-work-core-succinctly).
 
 ## ORM
 *O*bject *R*elational *M*apping
