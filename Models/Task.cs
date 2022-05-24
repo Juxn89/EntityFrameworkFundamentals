@@ -18,7 +18,7 @@ public class Task {
     public Priority Priority {get; set;}
     public DateTime CreationDate {get; set;}
 
-    [NotMapped]
+    // [NotMapped]
     public string Summary {get; set;}
 
     // Relations with models
