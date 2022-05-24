@@ -1,16 +1,18 @@
 # Entity Framework - Fundamentals
 
+## Resources
 - [Entity Framework documentation](https://docs.microsoft.com/en-us/ef/).
 - [Code style rule options](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options).
 - [Entity Framework Core Succinctly](https://www.syncfusion.com/succinctly-free-ebooks/entity-frame-work-core-succinctly).
 - [Code First Data Annotations](https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/data-annotations).
 - [Relaciones Ms Docs](https://docs.microsoft.com/en-us/ef/core/modeling/relationships?tabs=fluent-api%2Cfluent-api-simple-key%2Csimple-key).
 - [Relaciones EFTutorial](https://www.entityframeworktutorial.net/efcore/configure-one-to-many-relationship-using-fluent-api-in-ef-core.aspx).
+- [Migrations Overview](https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli).
 
 ## ORM
 *O*bject *R*elational *M*apping
 
-*Popular ORM*
+*Populars ORM*
 - Hibernate (Java)
 - Dapper (.NET)
 - NHibernate (.NET)
@@ -34,3 +36,4 @@
 - Code-First and Data Annotations Attributes.
 - Database in memory and SQL Server.
 - Fluent API.
+- Migrations.
