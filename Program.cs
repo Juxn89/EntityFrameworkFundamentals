@@ -4,7 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<TasksDBContext>(p => p.UseInMemoryDatabase("TasksDB"));
+// builder.Services.AddDbContext<TasksDBContext>(p => p.UseInMemoryDatabase("TasksDB"));
+string connectionString = builder.Configuration.GetConnectionString("TasksDB");
+builder.Services.AddSqlServer<TasksDBContext>(connectionString);
 
 var app = builder.Build();
 
