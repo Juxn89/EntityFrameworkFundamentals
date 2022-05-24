@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace efFundamentals.Models;
 
@@ -13,5 +14,6 @@ public class Category {
     public int Weight {get; set;}
     
     // Relations with models
+    [JsonIgnore]
     public ICollection<Task> Tasks {get; set;}
 }
