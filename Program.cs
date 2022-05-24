@@ -38,7 +38,7 @@ app.MapPost("/api/task/", async ([FromServices] TasksDBContext dbContext, [FromB
     await dbContext.AddAsync<efFundamentals.Models.Task>(task);
     await dbContext.SaveChangesAsync();
 
-    return Results.Ok(task);
+    return Results.Ok(new {task = task, msg = "Created!"});
 });
 
 
@@ -53,10 +53,22 @@ app.MapPut("/api/task/{id}", async ([FromServices] TasksDBContext dbContext, [Fr
     data.Description = task.Description;
     data.Priority = task.Priority;
 
-    dbContext.Update<efFundamentals.Models.Task>(task);
+    dbContext.Update<efFundamentals.Models.Task>(data);
     await dbContext.SaveChangesAsync();
 
-    return Results.Ok(task);
+    return Results.Ok(new {task = data, msg = "Updated!"});
+});
+
+app.MapDelete("/api/task/{id}", async ([FromServices] TasksDBContext dbContext, [FromRoute] Guid id) => {
+    var task = dbContext.Tasks.Find(id);
+
+    if(task == null)
+        return Results.NotFound("Task not found.");
+        
+    dbContext.Remove<efFundamentals.Models.Task>(task);
+    await dbContext.SaveChangesAsync();
+
+    return Results.Ok("Removed!");
 });
 
 app.Run();
