@@ -41,4 +41,22 @@ app.MapPost("/api/task/", async ([FromServices] TasksDBContext dbContext, [FromB
     return Results.Ok(task);
 });
 
+
+
+app.MapPut("/api/task/{id}", async ([FromServices] TasksDBContext dbContext, [FromBody] efFundamentals.Models.Task task, [FromRoute] Guid id) => {
+    var data = dbContext.Tasks.Find(id);
+
+    if(data == null)
+        return Results.NotFound("Task not found.");
+        
+    data.Title = task.Title;
+    data.Description = task.Description;
+    data.Priority = task.Priority;
+
+    dbContext.Update<efFundamentals.Models.Task>(task);
+    await dbContext.SaveChangesAsync();
+
+    return Results.Ok(task);
+});
+
 app.Run();
