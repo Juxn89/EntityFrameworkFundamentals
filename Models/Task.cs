@@ -5,14 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace efFundamentals.Models;
 
 public class Task {
-    [Key]
+    // [Key]
     public Guid Id {get; set;}
 
-    [ForeignKey("CategoryID")]
+    // [ForeignKey("CategoryID")]
     public Guid CategoryId {get; set;}
 
-    [Required]
-    [MaxLength(200)]
+    // [Required]
+    // [MaxLength(200)]
     public string Title {get; set;}
     public string Description {get; set;}
     public Priority Priority {get; set;}
